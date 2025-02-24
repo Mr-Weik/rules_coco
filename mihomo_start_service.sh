@@ -24,3 +24,14 @@ stop() {
     killall mihomo_start_service
 }
 EOF
+
+# 使脚本可执行
+chmod +x $SCRIPT_PATH
+
+# 启用服务
+$SCRIPT_PATH enable
+
+# 启动服务
+$SCRIPT_PATH start
+
+echo "mihomo_start_service has been set up and started successfully!"
